@@ -1,4 +1,4 @@
-#### RegressViz
+## RegressViz
 
 *The size of the regression weight depends on the other predictor
 variables included in the equation and is, therefore, prone to change
