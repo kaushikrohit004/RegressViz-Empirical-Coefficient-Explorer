@@ -11,7 +11,7 @@ across situations involving different combinations of predictors*
 *Dissemination of complex information derived from sophisticated
 statistical models requires diligence* (Chen 2003).
 
-The **goal** of `RegrCoeffsExplorer` is to **enhance the
+The **goal** of `RegressViz` is to **enhance the
 interpretation** of regression results by providing **visualizations**
 that integrate empirical data distributions. This approach facilitates a
 more thorough understanding of the impacts of changes exceeding one unit
@@ -22,12 +22,12 @@ Elastic-Net Regularized Generalized Linear Models (GLMNET) frameworks.
 ## Installation
 
 You can install the current version of `RegrCoeffsExplorer` from
-[GitHub](https://github.com/vadimtyuryaev/RegrCoeffsExplorer) with:
+[GitHub](https://github.com/kaushikrohit004/RegressViz-Empirical-Coefficient-Explorer) with:
 
 ``` r
 library(devtools)
 
-devtools::install_github("vadimtyuryaev/RegrCoeffsExplorer",    
+devtools::install_github("kaushikrohit004/RegressViz-Empirical-Coefficient-Explorer",    
                          ref = "main",
                          dependencies = TRUE,
                          build_vignettes = TRUE)
