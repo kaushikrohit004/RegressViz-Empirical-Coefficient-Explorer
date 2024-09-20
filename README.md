@@ -1,16 +1,4 @@
-
-<!-- README.md is generated from README.Rmd. Please edit that file -->
-
-# RegrCoeffsExplorer
-
-<!-- badges: start -->
-
-![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
-![Lifecycle:Stable](https://img.shields.io/badge/Lifecycle-Stable-97ca00)
-[![R-CMD-check](https://github.com/r-lib/rcmdcheck/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/r-lib/rcmdcheck/actions/workflows/R-CMD-check.yaml)
-<!-- badges: end -->
-
-*Always present effect sizes for primary outcomes* (Wilkinson 1999).
+#RegressViz
 
 *The size of the regression weight depends on the other predictor
 variables included in the equation and is, therefore, prone to change
