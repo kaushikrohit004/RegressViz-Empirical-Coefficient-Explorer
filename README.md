@@ -97,29 +97,22 @@ outcomes through a binomial sampling process.
 library(RegrCoeffsExplorer)
 library(gridExtra)
 
-# Set seed for reproducibility
 set.seed(1945)
 
-# Set the number of observations
 n = 1000
 
-# Random means and SDs
 r_means = sample(1:5, 4, replace = TRUE)
 r_sd = sample(1:2, 4, replace = TRUE)
 
-# Generate predictor variables
 X1 = rnorm(n, mean = r_means[1], sd = r_sd[1])
 X2 = rnorm(n, mean = r_means[2], sd = r_sd[2])
 X3 = rnorm(n, mean = r_means[3], sd = r_sd[3])
 X4 = rnorm(n, mean = r_means[4], sd = r_sd[4])
 
-# Create a dummy variable
 F_dummy=sample(1:2, n, replace = TRUE) - 1
 
-# Convert to factor
 Factor_var=factor(F_dummy)
 
-# Define coefficients for each predictor
 beta_0 = -0.45
 beta_1 = -0.35
 beta_2 = 1.05
@@ -127,16 +120,12 @@ beta_3 = -0.7
 beta_4 = 0.55  
 beta_5 = 1.25
 
-# Generate the latent variable
 latent_variable = beta_0 + beta_1*X1 + beta_2*X2 + beta_3*X3 + beta_4*X4 +beta_5*F_dummy
 
-# Convert the latent variable to probabilities using the logistic function
 p = exp(latent_variable) / (1 + exp(latent_variable))
 
-# Generate binomial outcomes based on these probabilities
 y = rbinom(n, size = 1, prob = p)
 
-# Fit a GLM with a logistic link, including the factor variable
 glm_model = glm(y ~ X1 + X2 + X3 + X4 + Factor_var, 
                 family = binomial(link = "logit"),
                 data = data.frame(y, X1, X2, X3, X4, Factor_var))
@@ -202,17 +191,14 @@ exerts the most significant impact on the odds ratio.Yet, this
 interpretation can often be deceptive, as it fails to take into account
 the distribution of empirical data.
 
-### Real data differences
+### Data differences
 
 ``` r
 
-# Calculate all possible differences (1000 choose 2)
 all_diffs <- combn(X2, 2, function(x) abs(x[1] - x[2]))
 
-# Count differences that are exactly 1 units
 num_diffs_exactly_one = sum(abs(all_diffs) == 1)
 
-# Count the proportion of differences that more or equal to 2 units
 num_diffs_2_or_more = sum(abs(all_diffs)>=2)/sum(abs(all_diffs))
 
 print("Number of differences of exactly 1 unit:")
