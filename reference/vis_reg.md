@@ -166,9 +166,9 @@ Please note the following:
 - [`glm`](https://rdrr.io/r/stats/glm.html) for generalized linear
   models.
 
-- [`glmnet`](https://rdrr.io/pkg/glmnet/man/glmnet.html) and
-  [`cv.glmnet`](https://rdrr.io/pkg/glmnet/man/cv.glmnet.html) for lasso
-  and elastic-net regularized generalized linear models.
+- [`glmnet`](https://glmnet.stanford.edu/reference/glmnet.html) and
+  [`cv.glmnet`](https://glmnet.stanford.edu/reference/cv.glmnet.html)
+  for lasso and elastic-net regularized generalized linear models.
 
 - [`model.matrix`](https://rdrr.io/r/stats/model.matrix.html) for design
   matrices.
